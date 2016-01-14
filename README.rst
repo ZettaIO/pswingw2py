@@ -32,13 +32,14 @@ More complex messages can also be sent::
     sms.send_single(config, message)
     sms.send_batch(config, message_list)
 
-Send calls also return a message status that can be inspected. Docs needed.
+Send calls also returns a message status structure that can be inspected. Docs needed.
 
-Messages can also be send using a client class::
+Messages can also be sent using a client class::
 
     from pswingw2 import PSWinClient
     
     client = PSwinClient(config)
+    
     client.send_simple_message(..)
     client.send(..)
     client.send_single(..)
@@ -47,7 +48,8 @@ Messages can also be send using a client class::
 Properties
 ----------
 
-Receiver, sender and message text are mandatory properties when sending a message. Supported properties can be found in the `Online Documentation`_.
+Receiver, sender and message text are mandatory properties when sending a message. Supported properties can be found in the online
+documenttion under `Element valid for a Submit SMS request`.
 
 Config Object
 -------------
@@ -70,3 +72,4 @@ This code is free to use under the terms of the MIT license.
 .. _`PPSWinCom XML SMS Gateway`: https://wiki.pswin.com/Gateway%20XML%20API.ashx
 .. _pswinpy: https://github.com/PSWinCom/pswinpy
 .. _`LINK SMS Gateway`: http://www.linkmobility.com/products/LINK-sms-gateway/
+.. _`Element valid for a Submit SMS request`: https://wiki.pswin.com/Gateway%20XML%20API.ashx#Element_valid_for_a_Submit_SMS_request:_0
