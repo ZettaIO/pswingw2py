@@ -17,7 +17,7 @@ To use this package, you will need sign up for a Gateway account with PSWinCom. 
 
 This piece of code demonstrates how to send a simple SMS message::
 
-    import pswinpygw2 as sms
+    import pswingw2 as sms
     
     config = {
         'PSWIN_ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com'],
@@ -34,6 +34,16 @@ More complex messages can also be sent::
 
 Send calls also return a message status that can be inspected. Docs needed.
 
+Messages can also be send using a client class::
+
+    from pswingw2 import PSWinClient
+    
+    client = PSwinClient(config)
+    client.send_simple_message(..)
+    client.send(..)
+    client.send_single(..)
+    client.send_batch(..)
+
 Properties
 ----------
 
@@ -44,7 +54,7 @@ Config Object
 
 You configure the library by defining a config object that are passed with send calls.
 
-THe following attributes must be defined and the config object must be able to obtain them by name using
+The following attributes must be defined and the config object must be able to obtain them by name using
 the get(name) method. This can be a module, dict or class (or whatever structure is suitable for you)::
 
     PSWIN_ENDPOINTS = ['https://xml.pswin.com', 'https://xml2.pswin.com']
