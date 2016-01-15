@@ -18,8 +18,9 @@ To use this package, you will need sign up for a Gateway account with PSWinCom. 
 
 This piece of code demonstrates how to send a simple SMS message::
 
-    import pswingw2 as sms    
-    sms.send_simple_message(sms.config("username", "password"), msg_to="4700000000", msg_from="My Company", text="Hello World")
+    import pswingw2 as sms
+    config = sms.config("username", "password") 
+    sms.send_simple_message(config, msg_to="4700000000", msg_from="My Company", text="Hello World")
 
 More complex messages can also be sent::
 
