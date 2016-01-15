@@ -78,7 +78,7 @@ This code is free to use under the terms of the MIT license.
 
 .. _Python: http://www.python.org/
 .. _`Online Documentation`: https://wiki.pswin.com/Gateway%20XML%20API.ashx
-.. _`PPSWinCom XML SMS Gateway`: https://wiki.pswin.com/Gateway%20XML%20API.ashx
+.. _`PSWinCom XML SMS Gateway`: https://wiki.pswin.com/Gateway%20XML%20API.ashx
 .. _pswinpy: https://github.com/PSWinCom/pswinpy
 .. _`LINK SMS Gateway`: http://www.linkmobility.com/products/LINK-sms-gateway/
 .. _`Element valid for a Submit SMS request`: https://wiki.pswin.com/Gateway%20XML%20API.ashx#Element_valid_for_a_Submit_SMS_request:_0
