@@ -2,8 +2,8 @@
 
 from xml.etree.cElementTree import Element, SubElement
 from xml.etree import ElementTree
-
 from xml.dom import minidom
+import six
 
 # Message parameters we try to serialize
 # This can easily be mocked if needed
@@ -53,13 +53,13 @@ def deserialize(xml):
 
 def _dict_to_xml(data):
     """Converts a dict to xml"""
-    elems = data.keys()
-    if len(elems) > 1:
+    if len(data) > 1:
         raise ValueError("Cannot serialize a dict with multiple root nodes")
-    if len(elems) == 0:
+    if len(data) == 0:
         raise ValueError("dict as no root nodes")
-    root = Element(elems[0])
-    _dict_xml_node(data[elems[0]], root)
+    name, value = six.next(six.iteritems(data))
+    root = Element(name)
+    _dict_xml_node(value, root)
 
     rough_string = ElementTree.tostring(root, 'latin-1')
     reparsed = minidom.parseString(rough_string)
@@ -69,7 +69,7 @@ def _dict_to_xml(data):
 def _dict_xml_node(data, parent):
     """Traverse the dict data under the root key"""
     if isinstance(data, dict):
-        for elem, value in data.iteritems():
+        for elem, value in six.iteritems(data):
             sub = SubElement(parent, elem)
             sub.text = _dict_xml_node(value, sub)
     elif isinstance(data, list):
