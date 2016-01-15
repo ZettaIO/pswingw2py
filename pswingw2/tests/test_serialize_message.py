@@ -6,9 +6,9 @@ from pswingw2.serialization import serialize, deserialize
 
 @pytest.fixture
 def config():
-    return {'PSWIN_USERNAME': 'username',
-            'PSWIN_PASSWORD': 'password',
-            'PSWIN_ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com']}
+    return {'USERNAME': 'username',
+            'PASSWORD': 'password',
+            'ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com']}
 
 @pytest.fixture
 def single_message():

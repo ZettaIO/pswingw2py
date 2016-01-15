@@ -21,9 +21,9 @@ This piece of code demonstrates how to send a simple SMS message::
     import pswingw2 as sms
     
     config = {
-        'PSWIN_ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com'],
-        'PSWIN_USERNAME': 'myusername',
-        'PSWIN_PASSWORD': 'mypassword',
+        'ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com'],
+        'USERNAME': 'myusername',
+        'PASSWORD': 'mypassword',
     }
     sms.send_simple_message(config, msg_to="4700000000", msg_from="My Company", text="Hello World")
 
@@ -36,15 +36,20 @@ More complex messages can also be sent::
 Send calls also returns a message status structure that can be inspected. Docs needed.
 
 Messages can also be sent using a client class::
-
-    from pswingw2 import PSWinClient
     
-    client = PSwinClient(config)
+    client = sms.Client(config)
     
     client.send_simple_message(..)
     client.send(..)
     client.send_single(..)
     client.send_batch(..)
+
+Console Support
+---------------
+
+Installing this module also adds a console command for sending messages::
+
+    pswinsms -u username -p password -to 4700000000 -from "My Company" This is a test message
 
 Properties
 ----------
@@ -60,9 +65,9 @@ You configure the library by defining a config object that are passed with send 
 The following attributes must be defined and the config object must be able to obtain them by name using
 the get(name) method. This can be a module, dict or class (or whatever structure is suitable for you)::
 
-    PSWIN_ENDPOINTS = ['https://xml.pswin.com', 'https://xml2.pswin.com']
-    PSWIN_USERNAME = 'myusername'
-    PSWIN_PASSWORD = 'mypassword'
+    ENDPOINTS = ['https://xml.pswin.com', 'https://xml2.pswin.com']
+    USERNAME = 'myusername'
+    PASSWORD = 'mypassword'
 
 License
 -------

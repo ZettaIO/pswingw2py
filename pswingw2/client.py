@@ -12,7 +12,7 @@ def send_simple_message(config, msg_to=None, msg_from=None, text=None):
         msg_from: The number or name of the sender
         text:     Characters send in the message
     """
-    if not all(msg_to, msg_from, text):
+    if not all([msg_to, msg_from, text]):
         raise ValueError("Missing parameter. Mandatory: msg_to, msg_from, text")
 
     msg = {'RCV': msg_to, 'TEXT': text, 'SND': msg_from}
@@ -41,7 +41,7 @@ def _post_request(config, data, headers):
     if not config:
         raise ValueError("Config object not supplied")
     resp = None
-    for endpoint in config.get("PSWIN_ENDPOINTS"):
+    for endpoint in config.get("ENDPOINTS"):
         try:
             resp = requests.post(endpoint, data=data, headers=headers)
             if resp.status_code == 200:
@@ -54,7 +54,7 @@ def _post_request(config, data, headers):
     raise HTTPError("All endpoints failed")
 
 
-class PSWinClient(object):
+class Client(object):
     """Client class holding config object.
     It can be practical in some cases"""
 

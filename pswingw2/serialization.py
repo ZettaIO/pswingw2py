@@ -24,8 +24,8 @@ def serialize(config, messages):
     """
     data = {'SESSION': {'CLIENT': None, 'PW': None, 'MSGLST': None}}
     # Pass on auth data
-    data['SESSION']['CLIENT'] = config.get('PSWIN_USERNAME')
-    data['SESSION']['PW'] = config.get('PSWIN_PASSWORD')
+    data['SESSION']['CLIENT'] = config.get('USERNAME')
+    data['SESSION']['PW'] = config.get('PASSWORD')
 
     # Generate message data
     msg_list = []
