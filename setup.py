@@ -1,8 +1,9 @@
 from distutils.core import setup
 
+
 def readme():
-    with open('README.rst') as f:
-        return f.read()
+    with open('README.rst') as reader:
+        return reader.read()
 
 setup(
     name='pswingw2',
@@ -16,14 +17,14 @@ setup(
     keywords="sms, pswin, linkmobility",
     long_description=readme(),
     classifiers=[
-		      "Development Status :: 4 - Beta",
-		      "Programming Language :: Python",
-		      #"Programming Language :: Python :: 3",
-		      "Intended Audience :: Developers",
-		      "Topic :: Communications :: Telephony",
-		      "Topic :: Software Development :: Libraries :: Python Modules",
-		      "License :: OSI Approved :: MIT License",
-		      "Operating System :: OS Independent",
+        "Development Status :: 4 - Beta",
+        "Programming Language :: Python",
+        # "Programming Language :: Python :: 3",
+        "Intended Audience :: Developers",
+        "Topic :: Communications :: Telephony",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
     include_package_data=True,
     entry_points={

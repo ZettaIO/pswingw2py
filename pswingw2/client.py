@@ -4,6 +4,7 @@ import requests
 from requests.exceptions import HTTPError, ConnectionError
 from pswingw2.serialization import serialize
 
+
 def send_simple_message(config, msg_to=None, msg_from=None, text=None):
     """Sends a single sms.
     Parameters:
@@ -18,23 +19,27 @@ def send_simple_message(config, msg_to=None, msg_from=None, text=None):
     msg = {'RCV': msg_to, 'TEXT': text, 'SND': msg_from}
     return send_single(config, msg)
 
+
 def send(config, data):
     """Generic send method taking a single msssage or a list"""
     if isinstance(data, list):
         return send_batch(config, data)
     return send_single(config, data)
 
+
 def send_single(config, message):
     """Sends a single sms"""
     if isinstance(message, list):
         raise ValueError("Attempts to send batch as single message")
-    return send_batch(config, [message,])
+    return send_batch(config, [message])
+
 
 def send_batch(config, messages):
     """Sends multiple sms in a batch"""
     xml = serialize(config, messages)
     headers = {"Content-Type": "text/xml", "Content-Length": len(xml)}
     return _post_request(config, xml, headers)
+
 
 def _post_request(config, data, headers):
     """Attempts to do a post request on all endpoints"""

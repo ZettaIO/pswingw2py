@@ -6,6 +6,7 @@ import sys
 from pswingw2.config_defaults import get_simple_config
 from pswingw2 import send_simple_message
 
+
 def parse(args):
     """Parse arguments"""
     parser = argparse.ArgumentParser(description="Sending SMS using PSWin Gateway")
@@ -24,9 +25,11 @@ def parse(args):
     message = " ".join(data.message)
     return (data.username, data.password, data.msg_to, data.msg_from, message)
 
+
 def send(config, msg_to, msg_from, message):
     """Send message"""
     send_simple_message(config, msg_to=msg_to, msg_from=msg_from, text=message)
+
 
 def main(argv=sys.argv[1:]):
     """Entry point for console"""

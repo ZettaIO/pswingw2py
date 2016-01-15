@@ -11,6 +11,7 @@ REQUIRED_MSG_PARAMS = ['RCV', 'TEXT', 'SND']
 OPTIONAL_MSG_PARAMS = ['ID', 'RCPREQ', 'OP', 'CLASS', 'TTL', 'CPATAG',
                        'AGELIMIT', 'SHORTCODE', 'REPLACE', 'DELIVERYTIME']
 
+
 def serialize(config, messages):
     """Creates an xml representation we send to the server.
     Parameters:
@@ -40,11 +41,13 @@ def serialize(config, messages):
     data['SESSION']['MSGLST'] = msg_list
     return _dict_to_xml(data)
 
+
 def deserialize(xml):
     """
     Deserialize xml from the pswin api
     """
     return str(xml)
+
 
 # --- Utility functions
 
@@ -62,6 +65,7 @@ def _dict_to_xml(data):
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")
 
+
 def _dict_xml_node(data, parent):
     """Traverse the dict data under the root key"""
     if isinstance(data, dict):
@@ -73,6 +77,7 @@ def _dict_xml_node(data, parent):
             _dict_xml_node(entry, parent)
     else:
         return data
+
 
 def _xml_to_dict(xml):
     """Converts xml response to a dict"""

@@ -35,6 +35,7 @@ ENDPOINTS = DEFAULT_ENDPOINTS
 USERNAME = 'myusername'
 PASSWORD = 'mypassword'
 
+
 def get(name):
     """Make the config values accessible through get()"""
     return globals().get(name)
@@ -45,6 +46,7 @@ CONFIG = {
     'USERNAME': 'myusername',
     'PASSWORD': 'mypassword',
 }
+
 
 # --- Config as class ---
 class Config(object):
@@ -58,6 +60,7 @@ class Config(object):
         """We create a custom get() class method
         to support then get() interface"""
         return getattr(cls, name)
+
 
 # --- Shortcut for getting simple config
 def get_simple_config(username, password):
