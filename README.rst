@@ -56,7 +56,7 @@ Properties
 ----------
 
 Receiver, sender and message text are mandatory properties when sending a message. Supported properties can be found in the online
-documenttion under `Element valid for a Submit SMS request`.
+documention under `Element valid for a Submit SMS request`_.
 
 Config Object
 -------------
