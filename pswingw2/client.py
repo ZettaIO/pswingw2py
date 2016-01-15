@@ -52,9 +52,9 @@ def _post_request(config, data, headers):
             if resp.status_code == 200:
                 return resp.text
         except HTTPError:
-            print "HTTPError while sending sms with", endpoint
+            print("HTTPError while sending sms with endpoint {}".format(endpoint))
         except ConnectionError:
-            print "ConnectionError:", endpoint
+            print("ConnectionError: {}".format(endpoint))
 
     raise HTTPError("All endpoints failed")
 
