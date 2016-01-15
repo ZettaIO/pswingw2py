@@ -18,17 +18,17 @@ To use this package, you will need sign up for a Gateway account with PSWinCom. 
 
 This piece of code demonstrates how to send a simple SMS message::
 
-    import pswingw2 as sms
-    
+    import pswingw2 as sms    
+    sms.send_simple_message(sms.config("username", "password"), msg_to="4700000000", msg_from="My Company", text="Hello World")
+
+More complex messages can also be sent::
+
     config = {
         'ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com'],
         'USERNAME': 'myusername',
         'PASSWORD': 'mypassword',
     }
-    sms.send_simple_message(config, msg_to="4700000000", msg_from="My Company", text="Hello World")
-
-More complex messages can also be sent::
-
+    
     sms.send(config, data)
     sms.send_single(config, message)
     sms.send_batch(config, message_list)
