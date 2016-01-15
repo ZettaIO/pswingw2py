@@ -3,7 +3,7 @@ PSWinCom GW2 Python Package
 
 A Python_ interface to the `PPSWinCom XML SMS Gateway`_ now also called the `LINK SMS Gateway`_. Link Mobility bought PSWinCom 31 December 2014.
 
-The official pswinpy_ package has no activity in the last 5 years and only supports a small subset of the api. In January 2016 the default endpoints in the official package are no longer valid. This was main motivation for creating this library.
+The official pswinpy_ package has no activity in the last 5 years and only supports a small subset of the api. In January 2016 the default endpoints in the official package are no longer valid. This was the main motivation for creating this library.
 This module sends data as XML over HTTPS.
 
 Installation
@@ -69,6 +69,8 @@ the get(name) method. This can be a module, dict or class (or whatever structure
     ENDPOINTS = ['https://xml.pswin.com', 'https://xml2.pswin.com']
     USERNAME = 'myusername'
     PASSWORD = 'mypassword'
+
+The ``pswingw2.config_defaults`` module have some useful examples.
 
 License
 -------
