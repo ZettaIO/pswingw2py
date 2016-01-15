@@ -3,6 +3,9 @@ Contributing
 
 Submit bugs and send pull requests on Github. Any kind of contribution is welcome.
 
+Tests
+-----
+
 Make sure you run ``tox`` before submitting code::
 
     pip install tox
@@ -13,6 +16,12 @@ Run all actions defined in tox.ini::
 
     tox
 
-For Windows and OS X users, Vagrant_ can be useful. 
+Tests are located in the ``tests`` folder using with pytest_.
+
+Vagrant
+-------
+
+For Windows and OS X users, Vagrant_ can be useful unless you are developing for your current platform. This also maks sure you don't pollute your system with packages and completely isolates the project.
 
 .. _Vagrant: https://www.vagrantup.com/
+.. _pytest: http://pytest.org/
