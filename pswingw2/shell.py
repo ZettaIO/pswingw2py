@@ -35,7 +35,4 @@ def main(argv=sys.argv[1:]):
     """Entry point for console"""
     username, password, msg_to, msg_from, message = parse(argv)
     config = get_simple_config(username, password)
-    print "Account:", username, password
-    print "To From:", msg_to, msg_from
-    print "Message:", message
     send(config, msg_to, msg_from, message)
