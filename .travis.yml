@@ -1,6 +1,7 @@
 language: python
+sudo: false
 install:
-  - pip install -r travis-requirements.txt
+  - pip install tox-travis flake8
 script:
   - tox
 env:
