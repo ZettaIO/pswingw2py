@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pswingw2',
-    version='0.1',
+    version='0.2',
     url='https://github.com/ZettaIO/pswingw2py',
     download_url='https://github.com/ZettaIO/pswingw2py/archive/0.1.tar.gz',
     description="A package for sending SMS messages using the PSWinCom LINK SMS Gateway.",
@@ -24,5 +24,6 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': ['pswinsms = pswingw2.shell:main'],
-    }
+    },
+    install_requires=['requests', 'six']
 )
