@@ -12,7 +12,7 @@ This module sends data as XML over HTTPS.
 Installation
 ------------
 
-Currently only available through Github. It will be on PyPI when the project is a bit more mature.
+pip install pswingw2
 
 Basic Usage
 -----------

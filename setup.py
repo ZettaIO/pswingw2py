@@ -1,25 +1,20 @@
 from setuptools import setup
 
-
-def readme():
-    with open('README.rst') as reader:
-        return reader.read()
-
 setup(
     name='pswingw2',
     version='0.1',
     url='https://github.com/ZettaIO/pswingw2py',
-    description="A package for sending SMS messages using the PSWinCom SMS V2 Gateway.",
+    download_url='https://github.com/ZettaIO/pswingw2py/archive/0.1.tar.gz',
+    description="A package for sending SMS messages using the PSWinCom LINK SMS Gateway.",
     author='Einar Forselv',
     author_email='eforselv@gmail.com',
     packages=['pswingw2'],
     license='MIT',
     keywords="sms, pswin, linkmobility",
-    long_description=readme(),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
-        # "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3",
         "Intended Audience :: Developers",
         "Topic :: Communications :: Telephony",
         "Topic :: Software Development :: Libraries :: Python Modules",
