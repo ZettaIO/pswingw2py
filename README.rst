@@ -1,8 +1,8 @@
 .. image:: https://travis-ci.org/ZettaIO/pswingw2py.svg?branch=master
     :target: https://travis-ci.org/ZettaIO/pswingw2py
 
-PSWinCom GW2 Python Package
-===========================
+PSWinCom GW2 / LINK SMS GatewayPython Package
+=============================================
 
 A Python_ interface to the `PSWinCom XML SMS Gateway`_ now also called the `LINK SMS Gateway`_. Link Mobility bought PSWinCom 31 December 2014.
 
@@ -27,12 +27,6 @@ This piece of code demonstrates how to send a simple SMS message::
 
 More complex messages can also be sent::
 
-    config = {
-        'ENDPOINTS': ['https://xml.pswin.com', 'https://xml2.pswin.com'],
-        'USERNAME': 'myusername',
-        'PASSWORD': 'mypassword',
-    }
-    
     sms.send(config, data)
     sms.send_single(config, message)
     sms.send_batch(config, message_list)

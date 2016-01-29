@@ -7,7 +7,7 @@ def readme():
 
 setup(
     name='pswingw2',
-    version='0.0.1',
+    version='0.1',
     url='https://github.com/ZettaIO/pswingw2py',
     description="A package for sending SMS messages using the PSWinCom SMS V2 Gateway.",
     author='Einar Forselv',

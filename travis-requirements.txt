@@ -1,6 +1,0 @@
-requests
-#defusedxml
-six
-pytest
-flake8
-pep8

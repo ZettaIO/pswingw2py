@@ -22,7 +22,7 @@ Tests are located in the ``tests`` folder using with pytest_.
 Vagrant
 -------
 
-For Windows and OS X users, Vagrant_ can be useful unless you are developing for your current platform. This also maks sure you don't pollute your system with packages and completely isolates the project.
+For Windows and OS X users, Vagrant_ can be useful unless you are developing for your current platform. This also makes sure you don't pollute your system with packages.
 
 .. _Vagrant: https://www.vagrantup.com/
 .. _pytest: http://pytest.org/
