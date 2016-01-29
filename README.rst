@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ZettaIO/pswingw2py.svg?branch=master)](https://travis-ci.org/ZettaIO/pswingw2py)
+
 PSWinCom GW2 Python Package
 ===========================
 
