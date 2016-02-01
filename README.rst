@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/pypi/v/pswingw2.svg
+    :target: https://pypi.python.org/pypi/pswingw2
+
 .. image:: https://travis-ci.org/ZettaIO/pswingw2py.svg?branch=master
     :target: https://travis-ci.org/ZettaIO/pswingw2py
 
