@@ -4,7 +4,7 @@
 .. image:: https://travis-ci.org/ZettaIO/pswingw2py.svg?branch=master
     :target: https://travis-ci.org/ZettaIO/pswingw2py
 
-PSWinCom GW2 / LINK SMS GatewayPython Package
+PSWinCom GW2 / LINK SMS Gateway Python Package
 =============================================
 
 A Python_ interface to the `PSWinCom XML SMS Gateway`_ now also called the `LINK SMS Gateway`_. Link Mobility bought PSWinCom 31 December 2014.
