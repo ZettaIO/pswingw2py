@@ -37,7 +37,7 @@ def send_single(config, message):
 def send_batch(config, messages):
     """Sends multiple sms in a batch"""
     xml = serialize(config, messages)
-    headers = {"Content-Type": "text/xml", "Content-Length": len(xml)}
+    headers = {"Content-Type": "text/xml", "Content-Length": str(len(xml))}
     return _post_request(config, xml, headers)
 
 
@@ -45,7 +45,7 @@ def _post_request(config, data, headers):
     """Attempts to do a post request on all endpoints"""
     if not config:
         raise ValueError("Config object not supplied")
-    resp = None
+
     for endpoint in config.get("ENDPOINTS"):
         try:
             resp = requests.post(endpoint, data=data, headers=headers)
