@@ -1,3 +1,2 @@
-requests
-#defusedxml
-six
+requests==2.11.1
+six==1.10.0
