@@ -82,3 +82,8 @@ This code is free to use under the terms of the MIT license.
 .. _pswinpy: https://github.com/PSWinCom/pswinpy
 .. _`LINK SMS Gateway`: http://www.linkmobility.com/products/LINK-sms-gateway/
 .. _`Element valid for a Submit SMS request`: https://wiki.pswin.com/Gateway%20XML%20API.ashx#Element_valid_for_a_Submit_SMS_request:_0
+
+---
+This project is sponsored by [zetta.io](https://www.zetta.io)
+
+[![Zetta.IO](https://raw.githubusercontent.com/ZettaIO/pswingw2py/master/.github/logo.png)](https://www.zetta.io)
